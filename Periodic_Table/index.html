@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> TO DO understand how too use meta element for a11y-->
+    <!--<script src="script.js" defer></script> -->
+    <style>
+    .overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5em);
+    z-index: 9;
+}
+
+.modal.open, .overlay.open {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    padding: 0.5em;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: white;
+    border-radius: 0.25rem;
+    z-index: 10;
+}
+    </style>
+    <title>Periodic Table of HTML Elements</title>
+</head>
+
+<body>
+<!-- <h1 class="main-header">Periodic Table of HTML Elements</h1>
+    <article class="element root-element">
+        <h2 class="element-header">"html"</h2> -->
+
+    <button data-open-modal>Open</button> 
+    <div data-overlay class="overlay"></div>
+    <div data-modal class="modal">
+        <div>This is a modal</div>
+        <button data-close-modal="">Close</button>
+    </div>
+    <!--</article>-->
+<script>
+    const openButton = document.querySelector('[data-open-modal]')
+    const closeButton = document.querySelector('[data-close-modal]')
+    const modal = document.querySelector('[data-modal]')
+    const overlay = document.querySelector('[data overlay]')
+
+    openButton.addEventListener('click', () => {
+        modal.classList.add('open')
+        overlay.classList.add('open')
+})
+
+    openButton.addEventListener('click', () => {
+        modal.classList.remove('open')
+        overlay.classList.remove('open')
+})
+
+</script>
+
+</body>
+</html>
