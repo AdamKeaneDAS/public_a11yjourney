@@ -21,18 +21,36 @@
   }
   
   .modal-header {
-    padding: 10px 15px;
-    display: flex;
+    padding: 5px 10px;
+    display: flex;    
     justify-content: space-between;
-    align-items: center;
+    align-items: normal;
     border-bottom: 1px solid black;
   }
-  
-  .modal-header .title {
-    font-size: 1.25rem;
-    font-weight: bold;
+
+
+  .modal-footer section {
+    font-size: .5em;
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
   }
-  
+
+  .modal-footer img {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+  }
+
+.modal-footer h2 {
+  font-size: 1.5rem;
+  margin: 0px;
+  padding: 0px;
+}
+
   .modal-header .close-button {
     cursor: pointer;
     border: none;
